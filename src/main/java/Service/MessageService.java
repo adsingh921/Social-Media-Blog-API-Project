@@ -94,10 +94,8 @@ public class MessageService {
         if (!retrievedMessage.isPresent()) {
             throw new ServiceException("Message not found"); // Throw exception if message is not found
         }
-
         retrievedMessage.get().setMessage_text(message.getMessage_text()); // Update the message text
         validateMessage(retrievedMessage.get()); // Validate the updated message content
-
         try {
             messageDao.update(retrievedMessage.get()); // Update the message in the database
             LOGGER.info("Updated message: {}", message); // Log updated message

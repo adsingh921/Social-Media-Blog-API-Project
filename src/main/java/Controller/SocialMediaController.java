@@ -147,7 +147,6 @@ public class SocialMediaController {
     private void getMessagesByAccountId(Context ctx) {
         try {
             int accountId = Integer.parseInt(ctx.pathParam("account_id"));
-
             List<Message> messages = messageService.getMessagesByAccountId(accountId);
             ctx.json(messages);
         } catch (ServiceException e) {

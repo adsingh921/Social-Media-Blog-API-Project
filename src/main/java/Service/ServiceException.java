@@ -5,7 +5,6 @@ package Service;
  * This exception extends RuntimeException, making it an unchecked exception.
  */
 public class ServiceException extends RuntimeException {
-
     // Constructor to create a ServiceException with a specific message.
     public ServiceException(String message) {
         super(message); // Pass the message to the superclass constructor
